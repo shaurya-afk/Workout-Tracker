@@ -30,3 +30,5 @@ A backend system for a workout tracker application that enables users to sign up
 * GET /api/reports - Generate a report on past workouts
 ## Contributions
 Contributions are welcome! Please open an issue or submit a pull request.
+
+[Roadmap](https://roadmap.sh/projects/fitness-workout-tracker)
