@@ -30,3 +30,7 @@ A backend system for a workout tracker application that enables users to sign up
 * GET /api/reports - Generate a report on past workouts
 ## Contributions
 Contributions are welcome! Please open an issue or submit a pull request.
+
+
+#### Self
+> [Generative AI Reference](https://www.meta.ai/c/69dd1a25-68a2-428d-846e-bd3beaa693a4)

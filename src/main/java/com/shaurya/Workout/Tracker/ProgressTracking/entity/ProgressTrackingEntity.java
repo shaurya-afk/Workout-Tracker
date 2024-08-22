@@ -1,5 +1,6 @@
-package com.shaurya.Workout.Tracker.entity;
+package com.shaurya.Workout.Tracker.ProgressTracking.entity;
 
+import com.shaurya.Workout.Tracker.User.entity.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -36,5 +37,7 @@ public class ProgressTrackingEntity {
     )
     private int progressId;
 
-
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private UserEntity userEntity;
 }

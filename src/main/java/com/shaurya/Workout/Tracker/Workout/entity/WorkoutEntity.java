@@ -1,5 +1,6 @@
-package com.shaurya.Workout.Tracker.entity;
+package com.shaurya.Workout.Tracker.Workout.entity;
 
+import com.shaurya.Workout.Tracker.User.entity.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -12,14 +13,6 @@ import java.util.Date;
 @AllArgsConstructor(access = AccessLevel.PROTECTED)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class WorkoutEntity {
-//    @Enumerated(EnumType.STRING)
-//    private Intensity intensity;
-//
-//    public enum Intensity{
-//        low,
-//        medium,
-//        high
-//    }
     @Id
     @SequenceGenerator(
             name = "workout_sequence",
@@ -34,7 +27,11 @@ public class WorkoutEntity {
             name = "id",
             updatable = false
     )
-    private int workoutId;
+    private Integer workoutId;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    private UserEntity userEntity;
 
     @Column(
             name = "workout_name",

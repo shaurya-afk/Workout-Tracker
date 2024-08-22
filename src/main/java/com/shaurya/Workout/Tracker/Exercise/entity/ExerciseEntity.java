@@ -1,4 +1,4 @@
-package com.shaurya.Workout.Tracker.entity;
+package com.shaurya.Workout.Tracker.Exercise.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,7 +24,7 @@ public class ExerciseEntity {
             name = "id",
             updatable = false
     )
-    private int exerciseId;
+    private Integer exerciseId;
 
     @Column(
             name = "exercise_name",
