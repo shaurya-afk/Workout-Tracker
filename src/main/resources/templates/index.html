@@ -1,0 +1,28 @@
+<!-- src/main/resources/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to your CSS file if any -->
+</head>
+<body>
+<h1>Welcome to the Workout Tracker</h1>
+<form action="/progress" method="post">
+    <label for="workoutId">Workout ID:</label>
+    <input type="text" id="workoutId" name="workoutId" required>
+
+    <label for="weight">Weight:</label>
+    <input type="number" id="weight" name="weight" required>
+
+    <label for="bodyFat">Body Fat Percentage:</label>
+    <input type="number" id="bodyFat" name="bodyFat" step="0.1" required>
+
+    <label for="notes">Notes:</label>
+    <textarea id="notes" name="notes"></textarea>
+
+    <button type="submit">Submit Progress</button>
+</form>
+</body>
+</html>

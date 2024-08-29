@@ -1,19 +1,12 @@
 package com.shaurya.Workout.Tracker.ProgressTracking.entity;
 
 import com.shaurya.Workout.Tracker.User.entity.UserEntity;
+import com.shaurya.Workout.Tracker.Workout.entity.WorkoutEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
-/*
-* Progress Tracking
-ProgressID (primary key)
-WorkoutID (foreign key referencing the Workouts table)
-Date
-Weight
-BodyFatPercentage
-Notes
-* */
-//TODO: connect the foreign key of workout id with the progress table
+import java.time.LocalDate;
+
 @Entity(name = "Progress Track")
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -38,6 +31,22 @@ public class ProgressTrackingEntity {
     private int progressId;
 
     @ManyToOne
+    @JoinColumn(name = "workout_id", referencedColumnName = "id")
+    private WorkoutEntity workoutEntity;
+
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private UserEntity userEntity;
+
+    @Column(name = "Date", nullable = false)
+    private LocalDate date;
+
+    @Column(name = "weight", nullable = false)
+    private double weight;
+
+    @Column(name = "body_fat_percent", nullable = false)
+    private double bodyFatPercentage;
+
+    @Column(name = "notes", length = 500)
+    private String notes;
 }

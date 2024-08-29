@@ -10,8 +10,8 @@ import java.util.Date;
 @Data
 @Getter
 @Setter
-@AllArgsConstructor(access = AccessLevel.PROTECTED)
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
+@NoArgsConstructor
 public class WorkoutEntity {
     @Id
     @SequenceGenerator(

@@ -3,7 +3,7 @@ package com.shaurya.Workout.Tracker.User.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity(name = "User")
+@Entity(name = "UserEntity")
 @Data
 @Getter
 @Setter
@@ -32,5 +32,9 @@ public class UserEntity {
     )
     private String username;
 
+    @Column(
+            name = "password",
+            nullable = false
+    )
     private String password; //TODO: add the password encryption system
 }
